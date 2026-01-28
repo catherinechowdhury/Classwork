@@ -15,20 +15,28 @@ public class Lab2Solutions {
     }
 
     public static double computeAverage(ArrayList<Integer> n){
-
-        int sum = 0;
-
-        for(int i = 0; i < n.size(); i++){
-            sum += n.get(i);
+        // [1,2,3,4,5] size = 5
+        //  0 1 2 3 4
+        int sum = 15;
+        
+        //ArrayList -> method called size
+        for(int i = 0; i < n.size(); i++){ // i = 5
+            sum = sum + n.get(i); //n.get(4) = 5 + 10 = 15
         }
 
-        return (double) sum/n.size();
+        double average = (double) sum/n.size(); // 5/2 = 2.5
+
+        return average;
     }
 
     public static void removeValues(ArrayList<Integer> n, double average){
-        for(int i = 0; i < n.size(); i++){
-            if(n.get(i) > average){
-                n.remove(n.get(i));
+        // [] EMPTY X
+        //  0 1 2 3
+
+        for(int i = 0 ; i < n.size(); i++){
+            //is 3 less than my avg? Avg 6
+            if(n.get(i) < average){
+                n.remove(n.get(i)); // n.get(0) = 5, n.get(0) = empty
                 i--;
             }
         }
@@ -46,7 +54,7 @@ public class Lab2Solutions {
     public static void main(String[] args) throws FileNotFoundException{
         //Create an Integer Arraylist
         ArrayList<Integer> al = new ArrayList<>();
-        
+
         createAndFill(al, 10);
         System.out.println(al);
 
@@ -57,12 +65,19 @@ public class Lab2Solutions {
         System.out.println(al);
 
         //How many usernames are valid?
-        Scanner input = new Scanner(new File("users.csv"));
+        File file = new File("users.csv");
+        Scanner input = new Scanner(file);
 
         int count = 0;
 
-        while(input.hasNext()){
+        // While loop
+
+        while(input.hasNextLine()){
+            // "Catherine,lune@gmail.com"
             String line = input.nextLine();
+            // "Catherine" , "Email"
+            // ["Catherine", "Email"]
+            //     0           1
             String[] data = line.split(",");
 
             boolean valid = validUserName(data[0]);

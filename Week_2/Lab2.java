@@ -22,9 +22,6 @@ public class Lab2{
             array[i] = random;
 
         }
-
-        
-
     }
 
     /**
@@ -91,12 +88,21 @@ public class Lab2{
 
         // void methods
         fillArray(array);
+
         print(array);
 
         // accessor method
         int count = aboveAverage(array);
 
         System.out.println("\nNumbers above average: " + count);
+
+        //Mod % 
+        // 5/2 = 2.5 = 2 goes into 5, 2 times with a remainder of 1
+        // 10/3 = 3 goes into 10, 3 times with a remainder of 1
+        // 10 % 3 = 1
+        
+        // even remainder of 0
+        // odd remainder of 1
 
 
 
