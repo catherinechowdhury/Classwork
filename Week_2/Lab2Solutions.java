@@ -1,5 +1,6 @@
 package Week_2;
 import java.util.*;
+import java.io.*;
 
 public class Lab2Solutions {
 
@@ -32,7 +33,17 @@ public class Lab2Solutions {
             }
         }
     }
-    public static void main(String[] args){
+
+    public static boolean validUserName(String username){
+        for(int i = 0; i < username.length(); i++){
+            if(!Character.isLowerCase(username.charAt(i))){
+                return false;
+            }
+        }
+
+        return true;
+    }
+    public static void main(String[] args) throws FileNotFoundException{
         //Create an Integer Arraylist
         ArrayList<Integer> al = new ArrayList<>();
         
@@ -44,6 +55,26 @@ public class Lab2Solutions {
 
         removeValues(al, average);
         System.out.println(al);
+
+        //How many usernames are valid?
+        Scanner input = new Scanner(new File("users.csv"));
+
+        int count = 0;
+
+        while(input.hasNext()){
+            String line = input.nextLine();
+            String[] data = line.split(",");
+
+            boolean valid = validUserName(data[0]);
+
+            if(valid){
+                System.out.println(data[0]);
+                count++;
+            }
+        }
+
+        System.out.println("Number of valid usernames: " + count);
+
     }
     
 }
