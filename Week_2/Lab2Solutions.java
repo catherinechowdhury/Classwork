@@ -30,13 +30,9 @@ public class Lab2Solutions {
     }
 
     public static void removeValues(ArrayList<Integer> n, double average){
-        // [] EMPTY X
-        //  0 1 2 3
-
         for(int i = 0 ; i < n.size(); i++){
-            //is 3 less than my avg? Avg 6
-            if(n.get(i) < average){
-                n.remove(n.get(i)); // n.get(0) = 5, n.get(0) = empty
+            if(n.get(i) > average){
+                n.remove(i); 
                 i--;
             }
         }
