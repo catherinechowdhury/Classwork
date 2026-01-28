@@ -44,38 +44,38 @@ public class Lab2Solutions {
         return true;
     }
     public static void main(String[] args) throws FileNotFoundException{
-        // //Create an Integer Arraylist
-        // ArrayList<Integer> al = new ArrayList<>();
+        //Create an Integer Arraylist
+        ArrayList<Integer> al = new ArrayList<>();
         
-        // createAndFill(al, 10);
-        // System.out.println(al);
+        createAndFill(al, 10);
+        System.out.println(al);
 
-        // double average = computeAverage(al);
-        // System.out.println("Average: " + average);
+        double average = computeAverage(al);
+        System.out.println("Average: " + average);
 
-        // removeValues(al, average);
-        // System.out.println(al);
+        removeValues(al, average);
+        System.out.println(al);
 
-        // //How many usernames are valid?
-        // Scanner input = new Scanner(new File("users.csv"));
+        //How many usernames are valid?
+        Scanner input = new Scanner(new File("users.csv"));
 
-        // int count = 0;
+        int count = 0;
 
-        // while(input.hasNext()){
-        //     String line = input.nextLine();
-        //     String[] data = line.split(",");
+        while(input.hasNext()){
+            String line = input.nextLine();
+            String[] data = line.split(",");
 
-        //     boolean valid = validUserName(data[0]);
+            boolean valid = validUserName(data[0]);
 
-        //     if(valid){
-        //         System.out.println(data[0]);
-        //         count++;
-        //     }
-        // }
+            if(valid){
+                System.out.println(data[0]);
+                count++;
+            }
+        }
 
-        // System.out.println("Number of valid usernames: " + count);
+        System.out.println("Number of valid usernames: " + count);
 
-        // input.close();
+        input.close();
 
         LinkedList<Integer> list = new LinkedList<>();
 
