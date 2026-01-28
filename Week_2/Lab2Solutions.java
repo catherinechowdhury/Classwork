@@ -44,37 +44,74 @@ public class Lab2Solutions {
         return true;
     }
     public static void main(String[] args) throws FileNotFoundException{
-        //Create an Integer Arraylist
-        ArrayList<Integer> al = new ArrayList<>();
+        // //Create an Integer Arraylist
+        // ArrayList<Integer> al = new ArrayList<>();
         
-        createAndFill(al, 10);
-        System.out.println(al);
+        // createAndFill(al, 10);
+        // System.out.println(al);
 
-        double average = computeAverage(al);
-        System.out.println("Average: " + average);
+        // double average = computeAverage(al);
+        // System.out.println("Average: " + average);
 
-        removeValues(al, average);
-        System.out.println(al);
+        // removeValues(al, average);
+        // System.out.println(al);
 
-        //How many usernames are valid?
-        Scanner input = new Scanner(new File("users.csv"));
+        // //How many usernames are valid?
+        // Scanner input = new Scanner(new File("users.csv"));
 
-        int count = 0;
+        // int count = 0;
 
-        while(input.hasNext()){
-            String line = input.nextLine();
-            String[] data = line.split(",");
+        // while(input.hasNext()){
+        //     String line = input.nextLine();
+        //     String[] data = line.split(",");
 
-            boolean valid = validUserName(data[0]);
+        //     boolean valid = validUserName(data[0]);
 
-            if(valid){
-                System.out.println(data[0]);
-                count++;
-            }
+        //     if(valid){
+        //         System.out.println(data[0]);
+        //         count++;
+        //     }
+        // }
+
+        // System.out.println("Number of valid usernames: " + count);
+
+        // input.close();
+
+        LinkedList<Integer> list = new LinkedList<>();
+
+        addIntegers(list);
+        printLinkedList(list);
+        printLength(list);
+        printIndex(list, 2);
+
+    }
+
+    public static void addIntegers(LinkedList<Integer> list){
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter three integers: ");
+        int x = input.nextInt();
+        int y = input.nextInt();
+        int z = input.nextInt();
+
+        list.add(x);
+        list.add(y);
+        list.add(z);
+
+    }
+
+    public static void printIndex(LinkedList<Integer> list,int n){
+        System.out.println(list.get(n));
+    }
+
+    public static void printLength(LinkedList<Integer> list){
+        System.out.println(list.size());
+    }
+
+    public static void printLinkedList(LinkedList<Integer>list){
+        for(int i = 0; i < list.size(); i++){
+            System.out.print(list.get(i) + " ");
         }
-
-        System.out.println("Number of valid usernames: " + count);
-
     }
     
 }
