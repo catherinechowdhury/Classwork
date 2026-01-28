@@ -28,7 +28,7 @@ public class Lab2Solutions {
     public static void removeValues(ArrayList<Integer> n, double average){
         for(int i = 0; i < n.size(); i++){
             if(n.get(i) > average){
-                n.remove(i);
+                n.remove(n.get(i));
                 i--;
             }
         }
