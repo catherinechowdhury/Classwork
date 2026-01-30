@@ -1,6 +1,19 @@
 package Week_2;
 import java.util.*;
 
+/****************************************************************
+ * 
+ * Lab 2
+ * 
+ * This program will fill an array with random numbers, find
+ * the average and count how many numbers are above average, 
+ * as well as print the array. 
+ * 
+ * The size of the array is determined by user input.
+ * 
+ * @author Catherine Chowdhury
+ * @date January 30, 2026
+ ***************************************************************/
 public class Lab2{
 
     /**
@@ -11,16 +24,16 @@ public class Lab2{
      * @param array
      */
     public static void fillArray(int[] array){
-        // Traverse the array
-        // for loop
-        // 0 - n-1
+        // Traverse the array using a for-loop
+        // index of an array goes from 0 to n-1
+        // n = size of the array
+
         // Random numbers between 0-20
         for(int i = 0; i < array.length; i++ ){
             // Fill with random numbers
             // (int) (Math.random() * max - min) + min
             int random = (int) (Math.random() * 20);
             array[i] = random;
-
         }
     }
 
@@ -34,14 +47,14 @@ public class Lab2{
      */
     public static int aboveAverage(int[] array){
         // sum
-        int sum = 0; // sum = 3;
+        int sum = 0; 
         // count
         int count = 0;
 
-        // traverse my array [1, 2, 3]
+        // traverse my array to calculate sum
         for(int i = 0; i < array.length; i++){
             // add to sum
-            sum += array[i]; // sum = sum + array[i]; 1 = 1 + array[1] = 1 + 2 = 3
+            sum += array[i]; // sum = sum + array[i]; 
         }
 
         //Calculate the average
@@ -76,13 +89,17 @@ public class Lab2{
     public static void main(String[] args){
         
         //Ask the user for the size of the array
+
         // 1. Create a Scanner Object
         Scanner input = new Scanner(System.in);
+
         // 2. Create a Prompt
         System.out.println("Give me a size: ");
+
         // 3. Input from the user
         int size = input.nextInt();
 
+        /******************************************* */
         //Create an integer array
         int[] array = new int[size];
 
@@ -97,7 +114,7 @@ public class Lab2{
         System.out.println("\nNumbers above average: " + count);
 
         //Mod % 
-        // 5/2 = 2.5 = 2 goes into 5, 2 times with a remainder of 1
+        
         // 10/3 = 3 goes into 10, 3 times with a remainder of 1
         // 10 % 3 = 1
         
