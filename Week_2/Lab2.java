@@ -104,7 +104,7 @@ public class Lab2{
         // even remainder of 0
         // odd remainder of 1
 
-
+        input.close();
 
     }
 }

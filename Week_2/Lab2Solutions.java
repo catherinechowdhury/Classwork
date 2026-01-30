@@ -109,6 +109,8 @@ public class Lab2Solutions {
         list.add(y);
         list.add(z);
 
+        input.close();
+
     }
 
     public static void printIndex(LinkedList<Integer> list,int n){
