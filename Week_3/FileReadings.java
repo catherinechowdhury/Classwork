@@ -32,9 +32,9 @@ public class FileReadings{
             System.out.println("Name : "+ data[0]);
         }
 
-        System.out.println(animal);
+        System.out.println(animal); //prints array
 
-        // Enhanced for-loop
+        // Enhanced for-loop: print out one at a time
         for(String i: animal){
             System.out.println(i);
         }
