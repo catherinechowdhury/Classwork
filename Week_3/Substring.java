@@ -27,6 +27,7 @@ public class Substring {
         // Concatenation
         String names = beg + mid + end; // puts it all together
 
+        System.out.println(names);
         System.out.println(beg + mid + end);
 
      }

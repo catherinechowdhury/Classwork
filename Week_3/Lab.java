@@ -33,7 +33,7 @@ public class Lab {
     }
 
     //Set age
-    public void setAge(int x){
+    public void setAge(int age){
         this.age = age;
     }
 

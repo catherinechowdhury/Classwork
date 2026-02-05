@@ -38,29 +38,8 @@ public class FileReadings{
         for(String i: animal){
             System.out.println(i);
         }
-
-
-
-
-
-
         
-
-
-
-
-
-
-
-
-
-
-
-        //Enhanced for loop
-        // for(String fave: favanimal){
-        //     System.out.println(fave);
-        // }
-        // "name,age,date"   
+        reader.close();
     }
 
 
