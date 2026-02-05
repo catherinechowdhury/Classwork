@@ -39,7 +39,7 @@ public class Lab {
 
     //Print
     public String toString(){
-        return "Name : " + name + " Age :" + age;
+        return "Text : " + name + " Date :" + age;
     }
 
     public static void main(String[] args){

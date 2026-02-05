@@ -28,6 +28,7 @@ public class Substring {
         String names = beg + mid + end; // puts it all together
 
         System.out.println(beg + mid + end);
-    }
+
+     }
     
 }

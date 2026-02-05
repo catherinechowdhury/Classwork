@@ -44,7 +44,7 @@ public class FileReadings{
 
 
 
-
+        
 
 
 
@@ -60,7 +60,7 @@ public class FileReadings{
         // for(String fave: favanimal){
         //     System.out.println(fave);
         // }
-        
+        // "name,age,date"   
     }
 
 
