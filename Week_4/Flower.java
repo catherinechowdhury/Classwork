@@ -19,23 +19,27 @@ public class Flower {
         this.petals = petals;
     }
 
-    // Getters and Setters
+    // Getter methods
     public String getName() {
         return name;
+    } 
+
+    public String getColor() {
+        return color;
     }   
+
+    public int getPetals() {
+        return petals;
+    }
+
+    // Setter methods
 
     public void setName(String name) {
         this.name = name;
     }
-     public String getColor() {
-        return color;
-    }   
+    
     public void setColor(String color) {
         this.color = color;
-    }
-
-    public int getPetals() {
-        return petals;
     }
 
     public void setPetals(int petals) {
