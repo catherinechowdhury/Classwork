@@ -1,6 +1,6 @@
 public class Color {
 
-    private int red;
+    int red;
     private int green;
     private int blue;
 
@@ -48,6 +48,7 @@ public class Color {
 
     @Override
     public boolean equals(Object obj) {
+        // what does this
         if (this == obj) return true;
 
         if (obj == null || getClass() != obj.getClass()) return false;
