@@ -14,7 +14,7 @@ Rectangle.java
 Shape.java
 Triangle.java
 
-Color.java
+# Ignore the following files and directories:
 Week5\Main.java
-TransparentColor.java
-
+Week5\Colors.java
+Week5\TransparentColor.java
