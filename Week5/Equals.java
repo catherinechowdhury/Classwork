@@ -5,7 +5,8 @@ public class Equals {
      * Comparing Objects
      * IMPORTANT NOTE: the parameter of the .equals method must be of type Object, not the class name (ex: Color), because we want to be able to compare any two objects, not just objects of the same class
      * If you use the class name as the parameter, then you can only compare objects of that class, and you would have to create multiple .equals methods for each class you want to compare, which * is not efficient 
-     * That would be an example of method overloading, which is when you have multiple methods with the same name but different parameters (ex: public boolean equals(Color o) and public boolean equals(TransparentColor o)) but we want method overriding, which is when you have a method in the child class that has the same signature as a method in the parent class (ex: public boolean * equals(Object obj)) 
+     * That would be an example of method overloading, which is when you have multiple methods with the same name but different parameters (ex: public boolean equals(Color o) and public boolean equals(TransparentColor o)) 
+     * but we want method overriding, which is when you have a method in the child class that has the same signature as a method in the parent class (ex: public boolean equals(Object obj)) 
      * @param Object
      */
 
@@ -62,7 +63,8 @@ public class Equals {
     /**
      * Equals method without comments
      * This is just to show what the .equals method would look like without the comments, so you can see the structure of the method more clearly
-     * The method signature should be the same as the .equals method above (public boolean equals(Object obj)), but I am naming it equalsWithoutComments to avoid confusion with the .equals method above
+     * The method signature should be the same as the .equals method above (public boolean equals(Object obj)), 
+     * but I am naming it equalsWithoutComments to avoid confusion with the .equals method above
      * @param Object to compare
      * @return true if objects are equal, false otherwise
      */
@@ -93,13 +95,16 @@ public class Equals {
         // Compare the attributes of the parent class
         // In this .equals method, we are in the child class, so we need to call the .equals method of the parent class (using super.equals(obj)) 
         // This will use the equals method above (public boolean equals(Object obj)) that is inside the Parent class (again, lets pretend we have two classes, a Parent class and a Child class)
-        // It is going to run through all the checks in the Parent class (like checking if the objects are the same instance, if the object is null, if they belong to different classes, and comparing the attributes of obj to the attributes of the parent class)
+        // It is going to run through all the checks in the Parent class (like checking if the objects are the same instance, 
+        // if the object is null, if they belong to different classes, and comparing the attributes of obj to the attributes of the parent class)
         // If any of those checks fail, then the objects are not equal, so we can return false immediately without needing to compare the attributes of the child class
 
         if(super.equals(obj) == false){
             return false;
         }
-        // If it doesn't fail, then we can continue to compare the attributes of the child class (which are attributes that are only in the child class and not in the parent class) to the object being compared (obj) by first casting obj to the correct type (the child class) and then comparing the attributes of the child class to the attributes of obj (which is now casted to the child class)
+        // If it doesn't fail, then we can continue to compare the attributes of the child class (which are attributes that are only in the child class and not in the parent class)
+        // to the object being compared (obj) by first casting obj to the correct type (the child class) and then comparing the attributes of the child class to the attributes of obj 
+        // (which is now casted to the child class)
         
         // Cast the object to the correct type (the child class) in order to access its attributes for comparison
         // EX: ChildClass other = (ChildClass) obj;
