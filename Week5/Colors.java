@@ -48,6 +48,11 @@ public class Colors {
         if(this.red == o.red && this.blue == o.blue && this.green == o.green){
             return true;
         }
+        String x = "1";
+        String y = "2";
+
+        x.equals(y);
+        
         return false;
     }
     public static void main(String[] args) {
@@ -68,6 +73,8 @@ public class Colors {
         for(int i = 0; i < array.length; i++){
             displayInfo(array[i]);
         }
+
+        input.close();
 
     }
 

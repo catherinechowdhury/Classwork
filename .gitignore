@@ -13,8 +13,11 @@ Main.java
 Rectangle.java
 Shape.java
 Triangle.java
+Main.java
+Color.java
+TransparentColor.java
 
-# Ignore the following files and directories:
-Week5\Main.java
-Week5\Colors.java
-Week5\TransparentColor.java
+Boat.java
+Car.java
+Lab6Main.java
+Vehicle.java
