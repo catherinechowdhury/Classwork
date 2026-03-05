@@ -16,7 +16,7 @@ public class Matrices {
                           {7,8,9,6}}; //row 2: col 0 = 7, col 1 = 8, col 2 = 9, col 3 = 6
 
         int[][] matrix = new int[3][4]; // 3 rows x 4 columns
-        
+
 
         // adding values to 2D array 
         for(int i = 0; i < array2.length; i++){ 
