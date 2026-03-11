@@ -13,7 +13,10 @@ public class Search {
         int left = 0;
         int right = array.length - 1;
 
-        // We will continue to search as long as the left pointer is less than or equal to the right pointer. If the left pointer exceeds the right pointer, it means we have searched the entire array and the target value is not found.
+        // We will continue to search as long as the left index is less than or equal to the right index. If the left index exceeds the right index, it means we have searched the entire array and the target value is not found.
+
+        // EX: array = {1, 2, 4, 5, 8}
+        // left = 0 index, right = 4 index
         while(left <= right){
 
             // We calculate the middle index of the current search range using the formula: mid = left + (right - left) / 2. This formula helps to avoid potential overflow issues that can occur with large arrays.
@@ -33,6 +36,16 @@ public class Search {
                 right = mid - 1;
             }
         }
+
+        // Binary Search in descending order
+        // if(array[mid] == target){
+        //     found = true;
+        //     break;
+        // } else if(array[mid] > target){
+        //     left = mid + 1;
+        // } else {
+        //     right = mid - 1;
+        // }
     }
     
 }
