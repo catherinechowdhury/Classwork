@@ -21,3 +21,6 @@ Boat.java
 Car.java
 Lab6Main.java
 Vehicle.java
+
+// Ignore the Practice folder and its contents
+Practice/
