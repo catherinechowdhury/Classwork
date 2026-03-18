@@ -7,26 +7,16 @@ public class LinkedList<E> {
         this.head = null;
     }
 
-    public void add(E data) {
-        Node<E> newNode = new Node<>(data);
-        if (head == null) {
-            head = newNode;
-        } else {
-            Node current = head;
-            while (current.next != null) {
-                current = current.next;
-            }
-            current.next = newNode;
-        }
+    public LinkedList(Node<E> head) {
+        this.head = head;
     }
 
-    public void printList() {
-        Node current = head;
-        while (current != null) {
-            System.out.print(current.data + " ");
-            current = current.next;
-        }
-        System.out.println();
+    public Node<E> getHead() {
+        return head;
+    }
+
+    public void setHead(Node<E> head) {
+        this.head = head;
     }
     
 }
